@@ -1,9 +1,12 @@
 import { copyFileSync, readFileSync } from "node:fs";
 
 // The entry is a single image: a newspaper front page summing up
-// Friday 13 November 2026 — Ukraine's 1,200-drone night, the FAA ground
-// stop, Iranian drones off Bahrain, Nvidia's chief resigning, and the
-// Microsoft outage on day two. Copy it byte-for-byte to the output dir.
+// Friday 13 November 2026 in six full stories — Ukraine's 1,200-drone
+// night, the FAA ground stop, Iranian drones off Bahrain, Nvidia's chief
+// resigning, the Microsoft outage on day two, and a third row on China
+// drills, the Qatar-Turkey pact and the IEA oil surplus. Round 2: the
+// three footer one-liners are promoted to full stories. Copy it
+// byte-for-byte to the output dir.
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 const src = new URL("./entry.png", import.meta.url);
 const buf = readFileSync(src);
